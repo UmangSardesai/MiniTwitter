@@ -5,25 +5,25 @@
 
 → Data stored in H2, an in-memory SQL database.
 
-##Given below are the functionalities:
+## Given below are the functionalities:
 
-###1. Get the current user's followers:
+### 1. Get the current user's followers:
 
     curl -u "<username>:<password>" "http://localhost:8080/followers"
 
-###2. Get people which the current user follows:
+### 2. Get people which the current user follows:
 
     curl -u "<username>:<password>" "http://localhost:8080/following"
     
-###3. Follow a particular user:
+### 3. Follow a particular user:
 
     curl -u "<username>:<password>" -X PUT "http://localhost:8080/follow" --data "name=Xandra"
     
-###4. Unfollow a particular user:
+### 4. Unfollow a particular user:
 
     curl -u "<username>:<password>" -X PUT "http://localhost:8080/unfollow" --data "name=Xandra"
     
-###5. Get user feed:
+### 5. Get user feed:
 a) This is used to get tweets of the user himself and of all the users he follows.
 
     curl -u "<username>:<password>" "http://localhost:8080/feed"
@@ -32,7 +32,7 @@ b) Supports a "?search=" functionality which filters tweets depending on keyword
 
     curl -u "<username>:<password>" "http://localhost:8080/feed?search=lorem"
     
-###6. Gets a popular follower for every user.
+### 6. Gets a popular follower for every user.
 
     curl -u "<username>:<password>" "http://localhost:8080/popularfollower"
     
